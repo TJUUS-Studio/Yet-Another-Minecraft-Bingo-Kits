@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "yet_another_bingo_kits",
+  "version": "${version}",
+  "name": "Yet Another Bingo - Kits",
+  "description": "Add kits to Yet Another Bingo",
+  "authors": [],
+  "contact": {},
+  "license": "GPL-3.0",
+  "icon": "assets/yet_another_bingo_kits/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "fabric-datagen": [
+      "me.chengzhify.client.yabbingokitsDataGenerator"
+    ],
+    "main": [
+      "me.chengzhify.YABBingoKits"
+    ]
+  },
+  "mixins": [
+    "yet_another_bingo_kits.mixins.json",
+    {
+      "config": "yet_another_bingo_kits.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}",
+    "yet-another-minecraft-bingo": "*"
+  }
+}

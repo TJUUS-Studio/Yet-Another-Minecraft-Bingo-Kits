@@ -1,0 +1,502 @@
+{
+  "kits": [
+    {
+      "id": "kobe",
+      "name": "劳大",
+      "description": "鞘翅机动职业，开局高机动，注意烟花有限，小心坠机 ",
+      "iconId": "minecraft:elytra",
+      "items": [
+        {
+          "options": [
+            {
+              "itemId": "minecraft:elytra",
+              "count": 1,
+              "enchantments": {
+                "minecraft:binding_curse": 1
+              },
+              "displayName": ""
+            }
+          ]
+        },
+        {
+          "options": [
+            {
+              "itemId": "minecraft:firework_rocket",
+              "count": 48,
+              "enchantments": {},
+              "displayName": "1秒烟花"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "avenger",
+      "name": "复仇者",
+      "description": "强大的召唤物压制与神龟药水，蜗！",
+      "iconId": "minecraft:elder_guardian_spawn_egg",
+      "items": [
+        {
+          "options": [
+            {
+              "itemId": "minecraft:warden_spawn_egg",
+              "count": 1,
+              "enchantments": {},
+              "displayName": ""
+            }
+          ]
+        },
+        {
+          "options": [
+            {
+              "itemId": "minecraft:silverfish_spawn_egg",
+              "count": 5,
+              "enchantments": {},
+              "displayName": ""
+            }
+          ]
+        },
+        {
+          "options": [
+            {
+              "itemId": "minecraft:elder_guardian_spawn_egg",
+              "count": 1,
+              "enchantments": {},
+              "displayName": ""
+            }
+          ]
+        },
+        {
+          "options": [
+            {
+              "itemId": "minecraft:iron_golem_spawn_egg",
+              "count": 1,
+              "enchantments": {},
+              "displayName": ""
+            }
+          ]
+        },
+        {
+          "options": [
+            {
+              "itemId": "minecraft:splash_potion",
+              "count": 1,
+              "enchantments": {},
+              "components": {
+                "minecraft:potion_contents": "minecraft:turtle_master"
+              },
+              "displayName": "喷溅型神龟药水"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yangyouji",
+      "name": "养由基",
+      "description": "强力远程职业，高爆发弓箭，一发入魂",
+      "iconId": "minecraft:bow",
+      "items": [
+        {
+          "options": [
+            {
+              "itemId": "minecraft:bow",
+              "count": 1,
+              "enchantments": {
+                "minecraft:power": 4,
+                "minecraft:punch": 2
+              },
+              "displayName": ""
+            }
+          ]
+        },
+        {
+          "options": [
+            {
+              "itemId": "minecraft:spectral_arrow",
+              "count": 32,
+              "enchantments": {},
+              "displayName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "radagon",
+      "name": "拉达冈",
+      "description": "玛莉卡就是拉达冈：重锤与风弹，高机动与空战爆发",
+      "iconId": "minecraft:mace",
+      "items": [
+        {
+          "options": [
+            {
+              "itemId": "minecraft:mace",
+              "count": 1,
+              "enchantments": {
+                "minecraft:density": 5,
+                "minecraft:breach": 3
+              },
+              "displayName": ""
+            }
+          ]
+        },
+        {
+          "options": [
+            {
+              "itemId": "minecraft:wind_charge",
+              "count": 12,
+              "enchantments": {},
+              "displayName": ""
+            }
+          ]
+        },
+        {
+          "options": [
+            {
+              "itemId": "minecraft:enchanted_book",
+              "count": 3,
+              "components": {
+                "minecraft:stored_enchantments": {
+                  "minecraft:wind_burst": 1
+                }
+              },
+              "displayName": "风暴附魔书"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "misaka",
+      "name": "弥撒卡",
+      "description": "社长的意念，哈吉米南北绿豆",
+      "iconId": "minecraft:netherite_chestplate",
+      "items": [
+        {
+          "options": [
+            {
+              "itemId": "minecraft:cat_spawn_egg",
+              "count": 1,
+              "enchantments": {},
+              "displayName": "哈基米"
+            }
+          ]
+        },
+        {
+          "options": [
+            {
+              "itemId": "minecraft:lead",
+              "count": 1,
+              "enchantments": {},
+              "displayName": "SM"
+            }
+          ]
+        },
+        {
+          "options": [
+            {
+              "itemId": "minecraft:netherite_chestplate",
+              "count": 1,
+              "enchantments": {
+                "minecraft:vanishing_curse": 1,
+                "minecraft:binding_curse": 1
+              },
+              "displayName": ""
+            }
+          ]
+        },
+        {
+          "options": [
+            {
+              "itemId": "minecraft:netherite_leggings",
+              "count": 1,
+              "enchantments": {
+                "minecraft:vanishing_curse": 1,
+                "minecraft:binding_curse": 1
+              },
+              "displayName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wandering_knight",
+      "name": "流浪骑士",
+      "description": "骑兵机动与稳定续航，开局自带钻石矛突进。",
+      "iconId": "minecraft:saddle",
+      "items": [
+        {
+          "options": [
+            {
+              "itemId": "minecraft:diamond_spear",
+              "count": 1,
+              "enchantments": {
+                "minecraft:vanishing_curse": 1,
+                "minecraft:lunge": 3
+              },
+              "displayName": ""
+            }
+          ]
+        },
+        {
+          "options": [
+            {
+              "itemId": "minecraft:saddle",
+              "count": 1,
+              "enchantments": {},
+              "displayName": ""
+            }
+          ]
+        },
+        {
+          "options": [
+            {
+              "itemId": "minecraft:golden_apple",
+              "count": 2,
+              "enchantments": {},
+              "displayName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "enchanter",
+      "name": "附魔师",
+      "description": "快速成型附魔配置，真的有人玩辅助吗",
+      "iconId": "minecraft:enchanting_table",
+      "items": [
+        {
+          "options": [
+            {
+              "itemId": "minecraft:enchanting_table",
+              "count": 1,
+              "enchantments": {},
+              "displayName": ""
+            }
+          ]
+        },
+        {
+          "options": [
+            {
+              "itemId": "minecraft:experience_bottle",
+              "count": 128,
+              "enchantments": {},
+              "displayName": ""
+            }
+          ]
+        },
+        {
+          "options": [
+            {
+              "itemId": "minecraft:lapis_lazuli",
+              "count": 32,
+              "enchantments": {},
+              "displayName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "egsgg",
+      "name": "Egsgg",
+      "description": "服务器爆破者",
+      "iconId": "minecraft:tnt",
+      "items": [
+        {
+          "options": [
+            {
+              "itemId": "minecraft:flint_and_steel",
+              "count": 1,
+              "enchantments": {},
+              "displayName": ""
+            }
+          ]
+        },
+        {
+          "options": [
+            {
+              "itemId": "minecraft:tnt",
+              "count": 32,
+              "enchantments": {},
+              "displayName": ""
+            }
+          ]
+        },
+        {
+          "options": [
+            {
+              "itemId": "minecraft:iron_chestplate",
+              "count": 1,
+              "enchantments": {
+                "minecraft:blast_protection": 1,
+                "minecraft:binding_curse": 1
+              },
+              "displayName": ""
+            }
+          ]
+        },
+        {
+          "options": [
+            {
+              "itemId": "minecraft:iron_leggings",
+              "count": 1,
+              "enchantments": {
+                "minecraft:blast_protection": 1,
+                "minecraft:binding_curse": 1
+              },
+              "displayName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "phoenix",
+      "name": "不死鸟",
+      "description": "其实还是会死。",
+      "iconId": "minecraft:totem_of_undying",
+      "items": [
+        {
+          "options": [
+            {
+              "itemId": "minecraft:totem_of_undying",
+              "count": 1,
+              "enchantments": {},
+              "displayName": ""
+            }
+          ]
+        },
+        {
+          "options": [
+            {
+              "itemId": "minecraft:golden_sword",
+              "count": 1,
+              "enchantments": {
+                "minecraft:fire_aspect": 2,
+                "minecraft:unbreaking": 3,
+                "minecraft:sharpness": 3
+              },
+              "displayName": "黄金律法大剑"
+            }
+          ]
+        },
+        {
+          "options": [
+            {
+              "itemId": "minecraft:potion",
+              "count": 2,
+              "enchantments": {},
+              "components": {
+                "minecraft:potion_contents": "minecraft:strong_healing"
+              },
+              "displayName": "瞬间治疗药水 II"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "walker",
+      "name": "逃跑者",
+      "description": "你给路达哟!!!",
+      "iconId": "minecraft:chorus_fruit",
+      "items": [
+        {
+          "options": [
+            {
+              "itemId": "minecraft:chorus_fruit",
+              "count": 32,
+              "enchantments": {},
+              "displayName": ""
+            }
+          ]
+        },
+        {
+          "options": [
+            {
+              "itemId": "minecraft:potion",
+              "count": 3,
+              "enchantments": {},
+              "components": {
+                "minecraft:potion_contents": "minecraft:long_slow_falling"
+              },
+              "displayName": "缓降药水 (1:30)"
+            }
+          ]
+        },
+        {
+          "options": [
+            {
+              "itemId": "minecraft:diamond_boots",
+              "count": 1,
+              "enchantments": {
+                "minecraft:feather_falling": 4
+              },
+              "displayName": ""
+            }
+          ]
+        },
+        {
+          "options": [
+            {
+              "itemId": "minecraft:iron_sword",
+              "count": 1,
+              "enchantments": {},
+              "displayName": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "worker",
+      "name": "工作者",
+      "description": "辛勤的打工人，开局自带强力附魔的钻石镐与钻石斧，基建与近战两不误。",
+      "iconId": "minecraft:diamond_pickaxe",
+      "items": [
+        {
+          "options": [
+            {
+              "itemId": "minecraft:diamond_pickaxe",
+              "count": 1,
+              "enchantments": {
+                "minecraft:efficiency": 4,
+                "minecraft:unbreaking": 3,
+                "minecraft:fortune": 2
+              },
+              "displayName": "打工人的钻石镐"
+            }
+          ]
+        },
+        {
+          "options": [
+            {
+              "itemId": "minecraft:diamond_axe",
+              "count": 1,
+              "enchantments": {
+                "minecraft:efficiency": 4,
+                "minecraft:unbreaking": 3,
+                "minecraft:sharpness": 3
+              },
+              "displayName": "伐木与防身利斧"
+            }
+          ]
+        },
+        {
+          "options": [
+            {
+              "itemId": "minecraft:bread",
+              "count": 64,
+              "enchantments": {},
+              "displayName": "打工人的干粮"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
