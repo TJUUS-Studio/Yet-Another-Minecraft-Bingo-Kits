@@ -18,7 +18,7 @@
 - Fabric Loader: 0.19.5+
 - Fabric API: 0.162.0+26.3 或更新的 26.3 版本
 - Yet Another Bingo: 2.14.0+mc26.3
-- Fabric Language Kotlin: 1.13.12+kotlin.2.4.0 或更新版本
+- Fabric Language Kotlin: 1.13.11+kotlin.2.3.21 或更新版本（Yet Another Bingo 2.14.0 已内置）
 
 版本号来自当前工程配置，详细请见 [gradle.properties](gradle.properties) 与 [build.gradle](build.gradle)。
 
