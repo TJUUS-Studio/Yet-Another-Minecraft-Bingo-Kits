@@ -1,6 +1,6 @@
 package me.chengzhify.kit;
 
-import net.minecraft.item.ItemStack;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.server.MinecraftServer;
 
 import java.util.List;

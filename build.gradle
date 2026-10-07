@@ -1,5 +1,5 @@
 plugins {
-    id 'fabric-loom' version '1.15-SNAPSHOT'
+    id 'net.fabricmc.fabric-loom' version '1.17.21'
     id 'maven-publish'
 }
 
@@ -25,6 +25,13 @@ fabricApi {
     configureDataGeneration {
         client = true
     }
+    configureTests {
+        createSourceSet = true
+        modId = "yet_another_bingo_kits_test"
+        enableGameTests = true
+        enableClientGameTests = false
+        eula = true
+    }
 }
 
 repositories {
@@ -39,32 +46,44 @@ repositories {
         url = "https://gitlab.com/api/v4/projects/48318565/packages/maven"
         content { includeGroup("me.jfenn.bingo") }
     }
+    maven {
+        name = "Modrinth"
+        url = "https://api.modrinth.com/maven"
+        content { includeGroup("maven.modrinth") }
+    }
 }
 
 dependencies {
     // To change the versions see the gradle.properties file
     minecraft "com.mojang:minecraft:${project.minecraft_version}"
-    mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
-    modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
-    modImplementation "me.jfenn.bingo:api:2.9.7"
-    modImplementation "net.fabricmc:fabric-language-kotlin:1.11.0+kotlin.2.0.0"
-    modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+    implementation "net.fabricmc:fabric-loader:${project.loader_version}"
+    compileOnly "me.jfenn.bingo:api:${project.bingo_version}"
+    runtimeOnly "maven.modrinth:yet-another-minecraft-bingo:${project.bingo_version}+mc${project.minecraft_version}"
+    implementation "net.fabricmc:fabric-language-kotlin:${project.kotlin_version}"
+    implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+    gametestImplementation "me.jfenn.bingo:api:${project.bingo_version}"
 }
 
 processResources {
     inputs.property "version", project.version
     inputs.property "minecraft_version", project.minecraft_version
     inputs.property "loader_version", project.loader_version
+    inputs.property "fabric_version", project.fabric_version
+    inputs.property "bingo_version", project.bingo_version
+    inputs.property "kotlin_version", project.kotlin_version
     filteringCharset "UTF-8"
 
     filesMatching("fabric.mod.json") {
         expand "version": project.version,
                 "minecraft_version": project.minecraft_version,
-                "loader_version": project.loader_version
+                "loader_version": project.loader_version,
+                "fabric_version": project.fabric_version,
+                "bingo_version": project.bingo_version,
+                "kotlin_version": project.kotlin_version
     }
 }
 
-def targetJavaVersion = 21
+def targetJavaVersion = 25
 tasks.withType(JavaCompile).configureEach {
     // ensure that the encoding is set to UTF-8, no matter what the system default is
     // this fixes some edge cases with special characters not displaying correctly
@@ -77,18 +96,12 @@ tasks.withType(JavaCompile).configureEach {
 }
 
 java {
-    def javaVersion = JavaVersion.toVersion(targetJavaVersion)
-    if (JavaVersion.current() < javaVersion) {
-        toolchain.languageVersion = JavaLanguageVersion.of(targetJavaVersion)
-    }
-    // Loom will automatically attach sourcesJar to a RemapSourcesJar task and to the "build" task
-    // if it is present.
-    // If you remove this line, sources will not be generated.
+    toolchain.languageVersion = JavaLanguageVersion.of(targetJavaVersion)
     withSourcesJar()
 }
 
 jar {
-    from("LICENSE") {
+    from("LICENSE.txt") {
         rename { "${it}_${project.archives_base_name}" }
     }
 }

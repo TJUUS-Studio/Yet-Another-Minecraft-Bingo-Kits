@@ -3,21 +3,24 @@ package me.chengzhify.kit;
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.mojang.serialization.JsonOps;
-import net.minecraft.component.DataComponentTypes;
-import net.minecraft.component.ComponentType;
-import net.minecraft.component.type.NbtComponent;
-import net.minecraft.component.type.LoreComponent;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NbtCompound;
-import net.minecraft.nbt.NbtList;
-import net.minecraft.nbt.StringNbtReader;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.entry.RegistryEntry;
+import net.minecraft.core.component.DataComponents;
+import net.minecraft.core.component.DataComponentType;
+import net.minecraft.world.item.component.CustomData;
+import net.minecraft.world.item.component.ItemLore;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.nbt.ListTag;
+import net.minecraft.nbt.TagParser;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.core.Holder;
+import net.minecraft.resources.RegistryOps;
 import net.minecraft.server.MinecraftServer;
-import net.minecraft.text.Text;
-import net.minecraft.util.Formatting;
-import net.minecraft.util.Identifier;
+import net.minecraft.network.chat.Component;
+import net.minecraft.ChatFormatting;
+import net.minecraft.resources.Identifier;
+import net.minecraft.world.item.enchantment.Enchantment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -53,17 +56,18 @@ public class KitItemOption {
     public ItemStack createStack(MinecraftServer server) {
         ItemStack stack = createBaseStack(server);
         if (!shareable) {
-            stack.set(DataComponentTypes.CUSTOM_DATA, NbtComponent.of(createMarkerData(stack)));
+            stack.set(DataComponents.CUSTOM_DATA, CustomData.of(createMarkerData(stack)));
             applyKitTooltip(stack);
         }
         if (displayName != null && !displayName.isBlank()) {
-            stack.set(DataComponentTypes.CUSTOM_NAME, Text.literal(displayName));
+            stack.set(DataComponents.CUSTOM_NAME, Component.literal(displayName));
         }
         if (enchantments != null && !enchantments.isEmpty()) {
             for (Map.Entry<String, Integer> entry : enchantments.entrySet()) {
-                RegistryEntry.Reference<net.minecraft.enchantment.Enchantment> enchantment = server.getRegistryManager().getOrThrow(net.minecraft.registry.RegistryKeys.ENCHANTMENT).getEntry(Identifier.of(entry.getKey())).orElse(null);
+                Holder.Reference<Enchantment> enchantment = server.registryAccess().lookupOrThrow(Registries.ENCHANTMENT)
+                        .get(Identifier.parse(entry.getKey())).orElse(null);
                 if (enchantment != null) {
-                    stack.addEnchantment(enchantment, entry.getValue());
+                    stack.enchant(enchantment, entry.getValue());
                 }
             }
         }
@@ -71,18 +75,18 @@ public class KitItemOption {
     }
 
     private ItemStack createBaseStack(MinecraftServer server) {
-        Identifier identifier = Identifier.of(itemId);
-        Item item = Registries.ITEM.get(identifier);
+        Identifier identifier = Identifier.parse(itemId);
+        Item item = BuiltInRegistries.ITEM.getValue(identifier);
         ItemStack stack = new ItemStack(item, count);
         applyLegacyNbt(stack, server);
         applyComponents(stack, server);
         return stack;
     }
 
-    private NbtCompound createMarkerData(ItemStack stack) {
-        NbtCompound marker = stack.get(DataComponentTypes.CUSTOM_DATA) != null
-                ? stack.get(DataComponentTypes.CUSTOM_DATA).copyNbt()
-                : new NbtCompound();
+    private CompoundTag createMarkerData(ItemStack stack) {
+        CompoundTag marker = stack.get(DataComponents.CUSTOM_DATA) != null
+                ? stack.get(DataComponents.CUSTOM_DATA).copyTag()
+                : new CompoundTag();
         marker.putBoolean(KIT_ITEM_MARKER_KEY, true);
         marker.putBoolean(KIT_ITEM_NO_CONTAINER_KEY, true);
         return marker;
@@ -93,7 +97,7 @@ public class KitItemOption {
             return;
         }
         try {
-            NbtCompound parsed = StringNbtReader.readCompound(nbt);
+            CompoundTag parsed = TagParser.parseCompoundFully(nbt);
             if (parsed.contains("StoredEnchantments")) {
                 parsed.getList("StoredEnchantments").ifPresent(enchantmentsList -> applyEnchantments(stack, server, enchantmentsList));
             }
@@ -101,26 +105,26 @@ public class KitItemOption {
                 parsed.getList("Enchantments").ifPresent(enchantmentsList -> applyEnchantments(stack, server, enchantmentsList));
             }
             if (parsed.contains("Damage")) {
-                stack.setDamage(parsed.getInt("Damage").orElse(0));
+                stack.setDamageValue(parsed.getInt("Damage").orElse(0));
             }
         } catch (Exception ignored) {
         }
     }
 
-    private void applyEnchantments(ItemStack stack, MinecraftServer server, NbtList enchantmentList) {
+    private void applyEnchantments(ItemStack stack, MinecraftServer server, ListTag enchantmentList) {
         for (int i = 0; i < enchantmentList.size(); i++) {
-            NbtCompound enchantmentData = enchantmentList.getCompoundOrEmpty(i);
-            String enchantmentId = enchantmentData.getString("id", "");
+            CompoundTag enchantmentData = enchantmentList.getCompoundOrEmpty(i);
+            String enchantmentId = enchantmentData.getStringOr("id", "");
             int level = enchantmentData.getInt("lvl").orElse(0);
             if (enchantmentId.isBlank() || level <= 0) {
                 continue;
             }
-            RegistryEntry.Reference<net.minecraft.enchantment.Enchantment> enchantment = server.getRegistryManager()
-                    .getOrThrow(net.minecraft.registry.RegistryKeys.ENCHANTMENT)
-                    .getEntry(Identifier.of(enchantmentId))
+            Holder.Reference<Enchantment> enchantment = server.registryAccess()
+                    .lookupOrThrow(Registries.ENCHANTMENT)
+                    .get(Identifier.parse(enchantmentId))
                     .orElse(null);
             if (enchantment != null) {
-                stack.addEnchantment(enchantment, level);
+                stack.enchant(enchantment, level);
             }
         }
     }
@@ -129,13 +133,13 @@ public class KitItemOption {
         if (components == null || components.isEmpty()) {
             return;
         }
-        var jsonOps = server.getRegistryManager().getOps(JsonOps.INSTANCE);
+        var jsonOps = server.registryAccess().createSerializationContext(JsonOps.INSTANCE);
         for (Map.Entry<String, Object> entry : components.entrySet()) {
             Identifier identifier = Identifier.tryParse(entry.getKey());
             if (identifier == null) {
                 continue;
             }
-            var componentType = Registries.DATA_COMPONENT_TYPE.get(identifier);
+            var componentType = BuiltInRegistries.DATA_COMPONENT_TYPE.getValue(identifier);
             if (componentType == null) {
                 continue;
             }
@@ -146,29 +150,30 @@ public class KitItemOption {
             }
             JsonElement jsonElement = GSON.toJsonTree(rawValue);
             try {
-                Object component = componentType.getCodecOrThrow()
-                        .decode(jsonOps, jsonElement)
-                        .getOrThrow()
-                        .getFirst();
-                stack.set((ComponentType<Object>) componentType, component);
+                applyComponent(stack, componentType, jsonOps, jsonElement);
             } catch (Throwable ignored) {
             }
         }
     }
 
+    private static <T> void applyComponent(ItemStack stack, DataComponentType<T> type,
+                                           RegistryOps<JsonElement> ops, JsonElement value) {
+        stack.set(type, type.codecOrThrow().parse(ops, value).getOrThrow());
+    }
+
     private void applyKitTooltip(ItemStack stack) {
-        List<Text> loreLines = new ArrayList<>();
-        LoreComponent existingLore = stack.get(DataComponentTypes.LORE);
+        List<Component> loreLines = new ArrayList<>();
+        ItemLore existingLore = stack.get(DataComponents.LORE);
         if (existingLore != null) {
             loreLines.addAll(existingLore.lines());
             if (!loreLines.isEmpty()) {
-                loreLines.add(Text.empty());
+                loreLines.add(Component.empty());
             }
         }
-        loreLines.add(Text.literal("职业装备").formatted(Formatting.GOLD));
-        loreLines.add(Text.literal("死亡后删除并重发").formatted(Formatting.GRAY));
-        loreLines.add(Text.literal("不可放入容器").formatted(Formatting.DARK_GRAY));
-        stack.set(DataComponentTypes.LORE, new LoreComponent(loreLines));
+        loreLines.add(Component.literal("职业装备").withStyle(ChatFormatting.GOLD));
+        loreLines.add(Component.literal("死亡后删除并重发").withStyle(ChatFormatting.GRAY));
+        loreLines.add(Component.literal("不可放入容器").withStyle(ChatFormatting.DARK_GRAY));
+        stack.set(DataComponents.LORE, new ItemLore(loreLines));
     }
 
     public String getItemId() {
@@ -198,22 +203,22 @@ public class KitItemOption {
         if (!isKitTagged(stack) || ownerId == null) {
             return;
         }
-        NbtCompound marker = stack.get(DataComponentTypes.CUSTOM_DATA) != null
-                ? stack.get(DataComponentTypes.CUSTOM_DATA).copyNbt()
-                : new NbtCompound();
+        CompoundTag marker = stack.get(DataComponents.CUSTOM_DATA) != null
+                ? stack.get(DataComponents.CUSTOM_DATA).copyTag()
+                : new CompoundTag();
         marker.putString(KIT_ITEM_OWNER_KEY, ownerId.toString());
-        stack.set(DataComponentTypes.CUSTOM_DATA, NbtComponent.of(marker));
+        stack.set(DataComponents.CUSTOM_DATA, CustomData.of(marker));
     }
 
     public static UUID getOwner(ItemStack stack) {
-        NbtComponent customData = stack.get(DataComponentTypes.CUSTOM_DATA);
+        CustomData customData = stack.get(DataComponents.CUSTOM_DATA);
         if (customData == null) {
             return null;
         }
-        NbtCompound marker = customData.copyNbt();
-        String rawOwner = marker.getString(KIT_ITEM_OWNER_KEY, "");
+        CompoundTag marker = customData.copyTag();
+        String rawOwner = marker.getStringOr(KIT_ITEM_OWNER_KEY, "");
         if (rawOwner.isBlank()) {
-            rawOwner = marker.getString(LEGACY_KIT_ITEM_OWNER_KEY, "");
+            rawOwner = marker.getStringOr(LEGACY_KIT_ITEM_OWNER_KEY, "");
         }
         if (rawOwner.isBlank()) {
             return null;
@@ -245,11 +250,11 @@ public class KitItemOption {
         if (stack == null || stack.isEmpty()) {
             return false;
         }
-        NbtComponent customData = stack.get(DataComponentTypes.CUSTOM_DATA);
+        CustomData customData = stack.get(DataComponents.CUSTOM_DATA);
         if (customData == null) {
             return false;
         }
-        NbtCompound marker = customData.copyNbt();
+        CompoundTag marker = customData.copyTag();
         if (marker.getBoolean(key).orElse(false)) {
             return true;
         }

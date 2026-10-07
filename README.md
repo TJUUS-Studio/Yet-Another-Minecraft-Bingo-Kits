@@ -12,10 +12,12 @@
 
 ## 依赖与版本
 
-- Minecraft: 1.21.11
-- Fabric Loader: 0.18.0+
-- Fabric API
-- Yet Another Bingo（依赖其 API）
+- Minecraft Java Edition: 26.3
+- Java: 25
+- Fabric Loader: 0.19.5+
+- Fabric API: 0.162.0+26.3 或更新的 26.3 版本
+- Yet Another Bingo: 2.14.0+mc26.3
+- Fabric Language Kotlin: 1.13.11+kotlin.2.3.21 或更新版本（Yet Another Bingo 已内置）
 
 版本号来自当前工程配置，详细请见 [gradle.properties](gradle.properties) 与 [build.gradle](build.gradle)。
 
@@ -37,6 +39,8 @@
 
 ## 构建
 
+使用 JDK 25；Gradle Wrapper 会自动下载 Gradle 9.6.0。开发启动和游戏测试会自动下载对应的 Yet Another Bingo 模组。
+
 ```bash
 ./gradlew build
 ```
@@ -50,6 +54,14 @@ Windows 可使用：
 构建产物位于：
 
 - build/libs/
+
+`build` 同时运行 26.3 服务端 GameTest，验证默认职业物品与组件、附魔、旧 NBT、装备绑定、职业选择、开局发放和死亡重发。单独运行测试：
+
+```bash
+./gradlew runGameTest
+```
+
+升级时可保留已有的 `kits.json` 和 `mod_config.json`。本分支使用 Minecraft 官方命名，旧版 1.21.11 的构建产物不适用于 26.3。
 
 ## License
 
