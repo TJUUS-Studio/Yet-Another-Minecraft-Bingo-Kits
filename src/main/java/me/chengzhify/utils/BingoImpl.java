@@ -1,6 +1,7 @@
 package me.chengzhify.utils;
 
 import me.jfenn.bingo.api.BingoApi;
+import me.jfenn.bingo.api.IBingoApi;
 import me.jfenn.bingo.api.data.IBingoGame;
 import me.jfenn.bingo.api.data.BingoGameStatus;
 import me.jfenn.bingo.api.data.IBingoTeam;
@@ -12,13 +13,14 @@ import java.util.UUID;
 public class BingoImpl {
 
     public static boolean isAvailable() {
-        return BingoApi.getINSTANCE().getGame() != null && BingoApi.getINSTANCE().getTeams() != null;
+        IBingoApi api = getCurrentApi();
+        return api != null && api.getGame() != null && api.getTeams() != null;
     }
 
     public static boolean isInTeam(UUID uuid) {
         if (!isAvailable()) return false;
 
-        for (IBingoTeam team : BingoApi.getINSTANCE().getTeams()) {
+        for (IBingoTeam team : getCurrentApi().getTeams()) {
             for (UUID members : team.getPlayers()) {
                 if (members.equals(uuid)) {
                     return true;
@@ -31,7 +33,7 @@ public class BingoImpl {
     public static String getTeamId(UUID uuid) {
         if (!isAvailable()) return null;
 
-        for (IBingoTeam team : BingoApi.getINSTANCE().getTeams()) {
+        for (IBingoTeam team : getCurrentApi().getTeams()) {
             for (UUID members : team.getPlayers()) {
                 if (members.equals(uuid)) {
                     return team.getId();
@@ -42,7 +44,8 @@ public class BingoImpl {
     }
 
     public static boolean isStarted() {
-        IBingoGame game = BingoApi.getINSTANCE().getGame();
+        IBingoApi api = getCurrentApi();
+        IBingoGame game = api == null ? null : api.getGame();
         if (game != null) {
             return game.getStatus().equals(BingoGameStatus.PLAYING);
         }
@@ -50,7 +53,8 @@ public class BingoImpl {
     }
 
     public static boolean isStarting() {
-        IBingoGame game = BingoApi.getINSTANCE().getGame();
+        IBingoApi api = getCurrentApi();
+        IBingoGame game = api == null ? null : api.getGame();
         if (game != null) {
             return game.getStatus().equals(BingoGameStatus.STARTING);
         }
@@ -92,6 +96,7 @@ public class BingoImpl {
         if (api == null) {
             return null;
         }
+        // Public STARTING also covers loading; the selection menu needs the COUNTDOWN phase.
         Object state = getFieldValue(api, "state");
         if (state == null) {
             return null;
@@ -103,21 +108,8 @@ public class BingoImpl {
         return null;
     }
 
-    private static Object getCurrentApi() {
-        try {
-            Object instance = BingoApi.getINSTANCE();
-            if (instance != null) {
-                return instance;
-            }
-        } catch (RuntimeException ignored) {
-        }
-        try {
-            Field currentField = BingoApi.class.getDeclaredField("current");
-            currentField.setAccessible(true);
-            return currentField.get(null);
-        } catch (ReflectiveOperationException ignored) {
-            return null;
-        }
+    private static IBingoApi getCurrentApi() {
+        return BingoApi.getINSTANCE();
     }
 
     private static Object getFieldValue(Object target, String fieldName) {

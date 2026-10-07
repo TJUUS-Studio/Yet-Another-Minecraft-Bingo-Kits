@@ -19,6 +19,7 @@ import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
+import net.minecraft.util.Prediction;
 import net.minecraft.world.Container;
 import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.SimpleMenuProvider;
@@ -335,7 +336,7 @@ public class KitService {
                 continue;
             }
             KitItemOption.assignOwner(stack, player.getUUID());
-            player.getInventory().placeItemBackInInventory(stack);
+            player.getInventory().placeItemBackInInventory(stack, Prediction.SERVER_ONLY);
         }
         kitGranted.put(player.getUUID(), true);
     }

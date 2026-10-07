@@ -7,7 +7,6 @@
   "authors": [],
   "contact": {},
   "license": "GPL-3.0",
-  "icon": "assets/yet_another_bingo_kits/icon.png",
   "environment": "*",
   "entrypoints": {
     "fabric-datagen": [
@@ -26,8 +25,10 @@
   ],
   "depends": {
     "fabricloader": ">=${loader_version}",
-    "fabric-api": "*",
-    "minecraft": ">=${minecraft_version}",
-    "yet-another-minecraft-bingo": "*"
+    "fabric-api": ">=${fabric_version}",
+    "minecraft": "${minecraft_version}",
+    "yet-another-minecraft-bingo": ">=${bingo_version}",
+    "java": ">=25",
+    "fabric-language-kotlin": ">=${fabric_kotlin_version}"
   }
 }
