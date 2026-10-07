@@ -1,7 +1,7 @@
 package me.chengzhify.utils;
 
 import me.jfenn.bingo.api.BingoApi;
-import me.jfenn.bingo.api.data.BingoGame;
+import me.jfenn.bingo.api.data.IBingoGame;
 import me.jfenn.bingo.api.data.BingoGameStatus;
 import me.jfenn.bingo.api.data.IBingoTeam;
 
@@ -12,13 +12,13 @@ import java.util.UUID;
 public class BingoImpl {
 
     public static boolean isAvailable() {
-        return BingoApi.getGame() != null && BingoApi.getTeams() != null;
+        return BingoApi.getINSTANCE().getGame() != null && BingoApi.getINSTANCE().getTeams() != null;
     }
 
     public static boolean isInTeam(UUID uuid) {
         if (!isAvailable()) return false;
 
-        for (IBingoTeam team : BingoApi.getTeams()) {
+        for (IBingoTeam team : BingoApi.getINSTANCE().getTeams()) {
             for (UUID members : team.getPlayers()) {
                 if (members.equals(uuid)) {
                     return true;
@@ -31,7 +31,7 @@ public class BingoImpl {
     public static String getTeamId(UUID uuid) {
         if (!isAvailable()) return null;
 
-        for (IBingoTeam team : BingoApi.getTeams()) {
+        for (IBingoTeam team : BingoApi.getINSTANCE().getTeams()) {
             for (UUID members : team.getPlayers()) {
                 if (members.equals(uuid)) {
                     return team.getId();
@@ -42,7 +42,7 @@ public class BingoImpl {
     }
 
     public static boolean isStarted() {
-        BingoGame game = BingoApi.getGame();
+        IBingoGame game = BingoApi.getINSTANCE().getGame();
         if (game != null) {
             return game.getStatus().equals(BingoGameStatus.PLAYING);
         }
@@ -50,7 +50,7 @@ public class BingoImpl {
     }
 
     public static boolean isStarting() {
-        BingoGame game = BingoApi.getGame();
+        IBingoGame game = BingoApi.getINSTANCE().getGame();
         if (game != null) {
             return game.getStatus().equals(BingoGameStatus.STARTING);
         }
@@ -104,6 +104,13 @@ public class BingoImpl {
     }
 
     private static Object getCurrentApi() {
+        try {
+            Object instance = BingoApi.getINSTANCE();
+            if (instance != null) {
+                return instance;
+            }
+        } catch (RuntimeException ignored) {
+        }
         try {
             Field currentField = BingoApi.class.getDeclaredField("current");
             currentField.setAccessible(true);

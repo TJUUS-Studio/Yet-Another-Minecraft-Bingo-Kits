@@ -1,0 +1,1860 @@
+﻿{
+    "kits":  [
+                 {
+                     "id":  "skywars_armorer",
+                     "name":  "护甲师",
+                     "description":  "铁胸甲、铁护腿、钻石靴与抗性药水。",
+                     "iconId":  "minecraft:iron_chestplate",
+                     "items":  [
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:iron_chestplate",
+                                                           "count":  1,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:iron_leggings",
+                                                           "count":  1,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:diamond_boots",
+                                                           "count":  1,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:splash_potion",
+                                                           "count":  1,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "components":  {
+                                                                              "minecraft:potion_contents":  "minecraft:long_turtle_master"
+                                                                          },
+                                                           "displayName":  "抗性药水"
+                                                       }
+                                                   ]
+                                   }
+                               ]
+                 },
+                 {
+                     "id":  "skywars_armorsmith",
+                     "name":  "锻甲师",
+                     "description":  "铁砧、经验瓶、钻石头盔与强力附魔书。",
+                     "iconId":  "minecraft:anvil",
+                     "items":  [
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:anvil",
+                                                           "count":  1,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:experience_bottle",
+                                                           "count":  64,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:diamond_helmet",
+                                                           "count":  1,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:enchanted_book",
+                                                           "count":  1,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "components":  {
+                                                                              "minecraft:stored_enchantments":  {
+                                                                                                                    "minecraft:protection":  3,
+                                                                                                                    "minecraft:sharpness":  1,
+                                                                                                                    "minecraft:power":  3,
+                                                                                                                    "minecraft:feather_falling":  4,
+                                                                                                                    "minecraft:infinity":  1
+                                                                                                                }
+                                                                          },
+                                                           "displayName":  "锻甲师附魔书"
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:enchanted_book",
+                                                           "count":  1,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "components":  {
+                                                                              "minecraft:stored_enchantments":  {
+                                                                                                                    "minecraft:power":  1
+                                                                                                                }
+                                                                          },
+                                                           "displayName":  "力量附魔书"
+                                                       }
+                                                   ]
+                                   }
+                               ]
+                 },
+                 {
+                     "id":  "skywars_batguy",
+                     "name":  "蝙蝠侠",
+                     "description":  "黑色皮革套、保护铁靴、失明药水与蝙蝠蛋。",
+                     "iconId":  "minecraft:bat_spawn_egg",
+                     "items":  [
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:leather_helmet",
+                                                           "count":  1,
+                                                           "enchantments":  {
+                                                                                "minecraft:protection":  2
+                                                                            },
+                                                           "displayName":  "黑色皮革帽子"
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:leather_chestplate",
+                                                           "count":  1,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "displayName":  "黑色皮革外套"
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:leather_leggings",
+                                                           "count":  1,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "displayName":  "黑色皮革裤子"
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:iron_boots",
+                                                           "count":  1,
+                                                           "enchantments":  {
+                                                                                "minecraft:protection":  2
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:splash_potion",
+                                                           "count":  2,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "displayName":  "失明药水"
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:bat_spawn_egg",
+                                                           "count":  10,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   }
+                               ]
+                 },
+                 {
+                     "id":  "skywars_cactus",
+                     "name":  "仙人掌",
+                     "description":  "仙人掌、沙子与荆棘皮革护甲。",
+                     "iconId":  "minecraft:cactus",
+                     "items":  [
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:cactus",
+                                                           "count":  16,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:sand",
+                                                           "count":  32,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:leather_chestplate",
+                                                           "count":  1,
+                                                           "enchantments":  {
+                                                                                "minecraft:thorns":  5,
+                                                                                "minecraft:unbreaking":  5
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:leather_leggings",
+                                                           "count":  1,
+                                                           "enchantments":  {
+                                                                                "minecraft:thorns":  5,
+                                                                                "minecraft:unbreaking":  5
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:leather_helmet",
+                                                           "count":  1,
+                                                           "enchantments":  {
+                                                                                "minecraft:thorns":  5,
+                                                                                "minecraft:unbreaking":  5
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   }
+                               ]
+                 },
+                 {
+                     "id":  "skywars_default",
+                     "name":  "默认",
+                     "description":  "基础铁工具、铁剑与铁胸甲。",
+                     "iconId":  "minecraft:iron_sword",
+                     "items":  [
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:iron_pickaxe",
+                                                           "count":  1,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:iron_axe",
+                                                           "count":  1,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:iron_shovel",
+                                                           "count":  1,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:iron_sword",
+                                                           "count":  1,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:iron_chestplate",
+                                                           "count":  1,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   }
+                               ]
+                 },
+                 {
+                     "id":  "skywars_disco",
+                     "name":  "迪斯科",
+                     "description":  "投射保护与保护皮革套，附赠音符盒和唱片。",
+                     "iconId":  "minecraft:jukebox",
+                     "items":  [
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:leather_helmet",
+                                                           "count":  1,
+                                                           "enchantments":  {
+                                                                                "minecraft:projectile_protection":  4
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:leather_chestplate",
+                                                           "count":  1,
+                                                           "enchantments":  {
+                                                                                "minecraft:protection":  3,
+                                                                                "minecraft:thorns":  3
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:leather_leggings",
+                                                           "count":  1,
+                                                           "enchantments":  {
+                                                                                "minecraft:protection":  4
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:leather_boots",
+                                                           "count":  1,
+                                                           "enchantments":  {
+                                                                                "minecraft:feather_falling":  4
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:jukebox",
+                                                           "count":  1,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:note_block",
+                                                           "count":  12,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:music_disc_cat",
+                                                           "count":  1,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "displayName":  "随机唱片"
+                                                       }
+                                                   ]
+                                   }
+                               ]
+                 },
+                 {
+                     "id":  "skywars_ecologist",
+                     "name":  "生态学家",
+                     "description":  "高效铁斧、橡木与保护皮革裤。",
+                     "iconId":  "minecraft:iron_axe",
+                     "items":  [
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:iron_axe",
+                                                           "count":  1,
+                                                           "enchantments":  {
+                                                                                "minecraft:efficiency":  2,
+                                                                                "minecraft:sharpness":  1
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:oak_log",
+                                                           "count":  24,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:leather_leggings",
+                                                           "count":  1,
+                                                           "enchantments":  {
+                                                                                "minecraft:protection":  3
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   }
+                               ]
+                 },
+                 {
+                     "id":  "skywars_energix",
+                     "name":  "能量师",
+                     "description":  "短时间力量爆发与保护皮革裤。",
+                     "iconId":  "minecraft:potion",
+                     "items":  [
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:potion",
+                                                           "count":  1,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "components":  {
+                                                                              "minecraft:potion_contents":  "minecraft:strength"
+                                                                          },
+                                                           "displayName":  "力量药水"
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:leather_leggings",
+                                                           "count":  1,
+                                                           "enchantments":  {
+                                                                                "minecraft:protection":  2
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   }
+                               ]
+                 },
+                 {
+                     "id":  "skywars_frog",
+                     "name":  "青蛙",
+                     "description":  "青蛙套、跳跃/速度药水与睡莲。",
+                     "iconId":  "minecraft:lily_pad",
+                     "items":  [
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:leather_helmet",
+                                                           "count":  1,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "displayName":  "青蛙帽"
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:leather_chestplate",
+                                                           "count":  1,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "displayName":  "绿色皮革外套"
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:leather_leggings",
+                                                           "count":  1,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "displayName":  "绿色皮革裤子"
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:leather_boots",
+                                                           "count":  1,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "displayName":  "绿色皮革靴子"
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:splash_potion",
+                                                           "count":  1,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "components":  {
+                                                                              "minecraft:potion_contents":  "minecraft:leaping"
+                                                                          },
+                                                           "displayName":  "青蛙药水"
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:lily_pad",
+                                                           "count":  16,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   }
+                               ]
+                 },
+                 {
+                     "id":  "skywars_grenade",
+                     "name":  "手雷兵",
+                     "description":  "苦力怕蛋与爆炸保护皮革套。",
+                     "iconId":  "minecraft:creeper_spawn_egg",
+                     "items":  [
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:creeper_spawn_egg",
+                                                           "count":  3,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "displayName":  "苦力怕蛋"
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:leather_chestplate",
+                                                           "count":  1,
+                                                           "enchantments":  {
+                                                                                "minecraft:blast_protection":  4
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:leather_leggings",
+                                                           "count":  1,
+                                                           "enchantments":  {
+                                                                                "minecraft:blast_protection":  4
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:leather_boots",
+                                                           "count":  1,
+                                                           "enchantments":  {
+                                                                                "minecraft:blast_protection":  4
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   }
+                               ]
+                 },
+                 {
+                     "id":  "skywars_healer",
+                     "name":  "治疗师",
+                     "description":  "瞬间治疗、再生与金苹果。",
+                     "iconId":  "minecraft:golden_apple",
+                     "items":  [
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:splash_potion",
+                                                           "count":  3,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "components":  {
+                                                                              "minecraft:potion_contents":  "minecraft:healing"
+                                                                          },
+                                                           "displayName":  "瞬间治疗药水"
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:splash_potion",
+                                                           "count":  2,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "components":  {
+                                                                              "minecraft:potion_contents":  "minecraft:strong_regeneration"
+                                                                          },
+                                                           "displayName":  "再生药水"
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:golden_apple",
+                                                           "count":  2,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   }
+                               ]
+                 },
+                 {
+                     "id":  "skywars_knight",
+                     "name":  "骑士",
+                     "description":  "锋利二级铁剑与保护金头盔。",
+                     "iconId":  "minecraft:iron_sword",
+                     "items":  [
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:iron_sword",
+                                                           "count":  1,
+                                                           "enchantments":  {
+                                                                                "minecraft:sharpness":  2
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:golden_helmet",
+                                                           "count":  1,
+                                                           "enchantments":  {
+                                                                                "minecraft:protection":  2,
+                                                                                "minecraft:unbreaking":  3
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   }
+                               ]
+                 },
+                 {
+                     "id":  "skywars_pro",
+                     "name":  "老手",
+                     "description":  "进攻、防具、方块和金苹果的均衡套装。",
+                     "iconId":  "minecraft:iron_helmet",
+                     "items":  [
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:iron_helmet",
+                                                           "count":  1,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:iron_chestplate",
+                                                           "count":  1,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:iron_sword",
+                                                           "count":  1,
+                                                           "enchantments":  {
+                                                                                "minecraft:sharpness":  1
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:glass",
+                                                           "count":  16,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:golden_apple",
+                                                           "count":  1,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   }
+                               ]
+                 },
+                 {
+                     "id":  "skywars_scout",
+                     "name":  "侦察兵",
+                     "description":  "钻石剑、速度药水和钻石靴。",
+                     "iconId":  "minecraft:diamond_sword",
+                     "items":  [
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:diamond_sword",
+                                                           "count":  1,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:potion",
+                                                           "count":  2,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "components":  {
+                                                                              "minecraft:potion_contents":  "minecraft:long_swiftness"
+                                                                          },
+                                                           "displayName":  "速度药水"
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:diamond_boots",
+                                                           "count":  1,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   }
+                               ]
+                 },
+                 {
+                     "id":  "skywars_baseball_player",
+                     "name":  "棒球手",
+                     "description":  "保护四级铁头盔与击退木剑。",
+                     "iconId":  "minecraft:wooden_sword",
+                     "items":  [
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:iron_helmet",
+                                                           "count":  1,
+                                                           "enchantments":  {
+                                                                                "minecraft:protection":  4
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:wooden_sword",
+                                                           "count":  1,
+                                                           "enchantments":  {
+                                                                                "minecraft:knockback":  1
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   }
+                               ]
+                 },
+                 {
+                     "id":  "skywars_enchanter",
+                     "name":  "附魔师",
+                     "description":  "附魔台、经验瓶、书架与金套。",
+                     "iconId":  "minecraft:enchanting_table",
+                     "items":  [
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:enchanting_table",
+                                                           "count":  1,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:experience_bottle",
+                                                           "count":  64,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:bookshelf",
+                                                           "count":  8,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:golden_helmet",
+                                                           "count":  1,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:golden_chestplate",
+                                                           "count":  1,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:golden_leggings",
+                                                           "count":  1,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:golden_boots",
+                                                           "count":  1,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   }
+                               ]
+                 },
+                 {
+                     "id":  "skywars_engineer",
+                     "name":  "工程师",
+                     "description":  "红石工程材料、蛛网、打火石与保护金头。",
+                     "iconId":  "minecraft:redstone",
+                     "items":  [
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:tripwire_hook",
+                                                           "count":  64,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:cobweb",
+                                                           "count":  8,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:piston",
+                                                           "count":  64,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:slime_ball",
+                                                           "count":  64,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:redstone",
+                                                           "count":  64,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:lever",
+                                                           "count":  64,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:dispenser",
+                                                           "count":  64,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:gunpowder",
+                                                           "count":  64,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:sand",
+                                                           "count":  64,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:gravel",
+                                                           "count":  64,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:arrow",
+                                                           "count":  64,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:flint_and_steel",
+                                                           "count":  4,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:golden_helmet",
+                                                           "count":  1,
+                                                           "enchantments":  {
+                                                                                "minecraft:protection":  2
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   }
+                               ]
+                 },
+                 {
+                     "id":  "skywars_farmer",
+                     "name":  "农夫",
+                     "description":  "弹射物保护钻石护腿、鸡蛋与金苹果。",
+                     "iconId":  "minecraft:egg",
+                     "items":  [
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:diamond_leggings",
+                                                           "count":  1,
+                                                           "enchantments":  {
+                                                                                "minecraft:projectile_protection":  4
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:egg",
+                                                           "count":  16,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:golden_apple",
+                                                           "count":  1,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   }
+                               ]
+                 },
+                 {
+                     "id":  "skywars_fisherman",
+                     "name":  "渔夫",
+                     "description":  "高等级钓鱼竿、链甲头盔与铁靴。",
+                     "iconId":  "minecraft:fishing_rod",
+                     "items":  [
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:fishing_rod",
+                                                           "count":  1,
+                                                           "enchantments":  {
+                                                                                "minecraft:unbreaking":  10,
+                                                                                "minecraft:luck_of_the_sea":  10,
+                                                                                "minecraft:lure":  10
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:chainmail_helmet",
+                                                           "count":  1,
+                                                           "enchantments":  {
+                                                                                "minecraft:protection":  1,
+                                                                                "minecraft:respiration":  3
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:iron_boots",
+                                                           "count":  1,
+                                                           "enchantments":  {
+                                                                                "minecraft:protection":  1
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   }
+                               ]
+                 },
+                 {
+                     "id":  "skywars_hunter",
+                     "name":  "猎人",
+                     "description":  "力量二级弓与箭。",
+                     "iconId":  "minecraft:bow",
+                     "items":  [
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:bow",
+                                                           "count":  1,
+                                                           "enchantments":  {
+                                                                                "minecraft:power":  2
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:arrow",
+                                                           "count":  16,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   }
+                               ]
+                 },
+                 {
+                     "id":  "skywars_pharaoh",
+                     "name":  "法老",
+                     "description":  "保护金装、信标与矿物方块。",
+                     "iconId":  "minecraft:beacon",
+                     "items":  [
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:golden_helmet",
+                                                           "count":  1,
+                                                           "enchantments":  {
+                                                                                "minecraft:protection":  4,
+                                                                                "minecraft:unbreaking":  5
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:leather_chestplate",
+                                                           "count":  1,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "displayName":  "白色皮革外套"
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:leather_leggings",
+                                                           "count":  1,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "displayName":  "白色皮革裤子"
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:beacon",
+                                                           "count":  1,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:emerald_block",
+                                                           "count":  42,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:golden_boots",
+                                                           "count":  1,
+                                                           "enchantments":  {
+                                                                                "minecraft:protection":  4,
+                                                                                "minecraft:unbreaking":  5
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:iron_block",
+                                                           "count":  2,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:gold_block",
+                                                           "count":  2,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   }
+                               ]
+                 },
+                 {
+                     "id":  "skywars_speleologist",
+                     "name":  "洞穴学家",
+                     "description":  "高效锋利时运钻石镐、石头与钻石头盔。",
+                     "iconId":  "minecraft:diamond_pickaxe",
+                     "items":  [
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:diamond_pickaxe",
+                                                           "count":  1,
+                                                           "enchantments":  {
+                                                                                "minecraft:efficiency":  3,
+                                                                                "minecraft:sharpness":  2,
+                                                                                "minecraft:unbreaking":  3,
+                                                                                "minecraft:fortune":  2
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:stone",
+                                                           "count":  32,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:diamond_helmet",
+                                                           "count":  1,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   }
+                               ]
+                 },
+                 {
+                     "id":  "skywars_warlock",
+                     "name":  "术士",
+                     "description":  "伤害、虚弱、剧毒药水、金苹果与防具。",
+                     "iconId":  "minecraft:splash_potion",
+                     "items":  [
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:splash_potion",
+                                                           "count":  2,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "components":  {
+                                                                              "minecraft:potion_contents":  "minecraft:harming"
+                                                                          },
+                                                           "displayName":  "瞬间伤害药水"
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:splash_potion",
+                                                           "count":  2,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "components":  {
+                                                                              "minecraft:potion_contents":  "minecraft:weakness"
+                                                                          },
+                                                           "displayName":  "虚弱药水"
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:splash_potion",
+                                                           "count":  1,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "components":  {
+                                                                              "minecraft:potion_contents":  "minecraft:poison"
+                                                                          },
+                                                           "displayName":  "剧毒药水"
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:golden_apple",
+                                                           "count":  2,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:leather_chestplate",
+                                                           "count":  1,
+                                                           "enchantments":  {
+                                                                                "minecraft:protection":  4
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:chainmail_boots",
+                                                           "count":  1,
+                                                           "enchantments":  {
+                                                                                "minecraft:protection":  1
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   }
+                               ]
+                 },
+                 {
+                     "id":  "skywars_cannoneer",
+                     "name":  "炮手",
+                     "description":  "炸药、红石块、防爆摔落钻石靴、水桶与压力板。",
+                     "iconId":  "minecraft:tnt",
+                     "items":  [
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:tnt",
+                                                           "count":  24,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:redstone_block",
+                                                           "count":  10,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:diamond_boots",
+                                                           "count":  1,
+                                                           "enchantments":  {
+                                                                                "minecraft:feather_falling":  4,
+                                                                                "minecraft:blast_protection":  4
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:water_bucket",
+                                                           "count":  1,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:stone_pressure_plate",
+                                                           "count":  4,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   }
+                               ]
+                 },
+                 {
+                     "id":  "skywars_enderman",
+                     "name":  "末影人",
+                     "description":  "末影珍珠 与保护铁头/铁靴。",
+                     "iconId":  "minecraft:ender_pearl",
+                     "items":  [
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:ender_pearl",
+                                                           "count":  1,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "displayName":  "末影珍珠"
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:iron_helmet",
+                                                           "count":  1,
+                                                           "enchantments":  {
+                                                                                "minecraft:protection":  2
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:iron_boots",
+                                                           "count":  1,
+                                                           "enchantments":  {
+                                                                                "minecraft:protection":  2
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   }
+                               ]
+                 },
+                 {
+                     "id":  "skywars_guardian",
+                     "name":  "守卫者",
+                     "description":  "黑曜石、抗性药水、骷髅/僵尸蛋与链甲防具。",
+                     "iconId":  "minecraft:obsidian",
+                     "items":  [
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:obsidian",
+                                                           "count":  10,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:splash_potion",
+                                                           "count":  2,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "components":  {
+                                                                              "minecraft:potion_contents":  "minecraft:long_turtle_master"
+                                                                          },
+                                                           "displayName":  "抗性药水"
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:skeleton_spawn_egg",
+                                                           "count":  2,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:zombie_spawn_egg",
+                                                           "count":  3,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:chainmail_leggings",
+                                                           "count":  1,
+                                                           "enchantments":  {
+                                                                                "minecraft:protection":  1
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:chainmail_boots",
+                                                           "count":  1,
+                                                           "enchantments":  {
+                                                                                "minecraft:protection":  1
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   }
+                               ]
+                 },
+                 {
+                     "id":  "skywars_pyro",
+                     "name":  "纵火者",
+                     "description":  "打火石、熔岩桶、钻石胸甲与抗火药水。",
+                     "iconId":  "minecraft:lava_bucket",
+                     "items":  [
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:flint_and_steel",
+                                                           "count":  1,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:lava_bucket",
+                                                           "count":  5,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:diamond_chestplate",
+                                                           "count":  1,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:potion",
+                                                           "count":  1,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "components":  {
+                                                                              "minecraft:potion_contents":  "minecraft:fire_resistance"
+                                                                          },
+                                                           "displayName":  "抗火药水"
+                                                       }
+                                                   ]
+                                   }
+                               ]
+                 },
+                 {
+                     "id":  "skywars_slime",
+                     "name":  "史莱姆",
+                     "description":  "高摔落保护钻石靴与大量黏液块。",
+                     "iconId":  "minecraft:slime_block",
+                     "items":  [
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:diamond_boots",
+                                                           "count":  1,
+                                                           "enchantments":  {
+                                                                                "minecraft:feather_falling":  10,
+                                                                                "minecraft:protection":  3
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   },
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:slime_block",
+                                                           "count":  64,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "displayName":  ""
+                                                       }
+                                                   ]
+                                   }
+                               ]
+                 },
+                 {
+                     "id":  "skywars_zookeeper",
+                     "name":  "动物管理员",
+                     "description":  "随机刷怪蛋 用随机刷怪蛋近似表达。",
+                     "iconId":  "minecraft:chicken_spawn_egg",
+                     "items":  [
+                                   {
+                                       "options":  [
+                                                       {
+                                                           "itemId":  "minecraft:chicken_spawn_egg",
+                                                           "count":  5,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "displayName":  "随机刷怪蛋"
+                                                       },
+                                                       {
+                                                           "itemId":  "minecraft:zombie_spawn_egg",
+                                                           "count":  5,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "displayName":  "随机刷怪蛋"
+                                                       },
+                                                       {
+                                                           "itemId":  "minecraft:skeleton_spawn_egg",
+                                                           "count":  5,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "displayName":  "随机刷怪蛋"
+                                                       },
+                                                       {
+                                                           "itemId":  "minecraft:spider_spawn_egg",
+                                                           "count":  5,
+                                                           "enchantments":  {
+
+                                                                            },
+                                                           "displayName":  "随机刷怪蛋"
+                                                       }
+                                                   ]
+                                   }
+                               ]
+                 }
+             ]
+}
+

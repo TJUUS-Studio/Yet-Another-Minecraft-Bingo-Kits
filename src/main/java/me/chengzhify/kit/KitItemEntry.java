@@ -1,8 +1,7 @@
 package me.chengzhify.kit;
 
-import net.minecraft.item.ItemStack;
 import net.minecraft.server.MinecraftServer;
-
+import net.minecraft.world.item.ItemStack;
 import java.util.List;
 import java.util.Random;
 import java.util.stream.Collectors;
